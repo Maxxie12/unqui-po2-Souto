@@ -26,17 +26,37 @@ class CounterTestCase {
 		counter.add(4);
 	}
 	
-	@Test 
-	public void testEsPar() {
-		assertTrue(counter.esNumeroPar(2));
-		
-		}
-	
+
 	
 	@Test
-	public int testEvenNumbers() {
+	public void testEvenNumbers() {
 		int cantidad = counter.getPares();
-		assertEquals(cantidad, 1);
+		assertEquals(cantidad, 2);
+		
 	}
+	
+	@Test 
+	public void testUnevennumbers() {
+		int cantidad = counter.getImpares();
+		assertEquals(cantidad, 8);
+	}
+	
+	@Test 
+	public void testEsMultiploDe() {
+		int cantidad = counter.getMultiplosDe(2);
+		assertEquals(cantidad, 2);
+		
+	}
+	
+
+	@Test
+	public void multiplos() {
+		int amount = counter.multiplos(3, 2);	
+		assertEquals(amount, 996);
+	}
+
+
+
+
 
 }
